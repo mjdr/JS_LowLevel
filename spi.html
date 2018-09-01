@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SPI</title>
+    <script src="spi.js"></script>
+    <style>
+        #main {
+            text-align: center;
+            width: 100%;
+        }
+        #display {
+            width: 100%;
+            border: 1px solid black;
+        }
+        input, button {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body onload="init()">
+    <div id="main">
+        <canvas id="display"></canvas>
+        <div>
+            <input type="text" id="data" placeholder="Data"><br/>
+            <input type="number" id="rate" value="1.0" step="0.1" placeholder="Rate (bps)"><br/>
+            <button onClick="sendData()">Send</button>
+        </div>
+        <div style="overflow-y: scroll">
+            <canvas width="900" height="250" id="graph"></canvas>
+        </div>
+    </div>
+</body>
+</html>
